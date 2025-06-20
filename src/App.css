@@ -1,38 +1,321 @@
-.App {
-  text-align: center;
+.top-div {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-div {
+  width: 80%;
+  max-width: 550px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width: 768px) {
+  .main-div {
+    max-width: 1140px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-div {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/money-manager/money-manager-bg.png');
+  background-size: cover;
+  border-radius: 16px;
+  margin-top: 64px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  height: 130px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 768px) {
+  .header-div {
+    align-items: flex-start;
+    padding: 48px;
+    height: 90px;
   }
-  to {
-    transform: rotate(360deg);
+}
+.hiname {
+  color: #475569;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .hiname {
+    font-size: 30px;
+  }
+}
+
+.para {
+  color: #475569;
+  font-family: 'Roboto';
+  font-size: 14px;
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .para {
+    font-size: 18px;
+  }
+}
+.span{
+  color: #0b69ff;
+  font-weight: 500;
+}
+.amounts-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .amounts-div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.balance-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ecfccb;
+  width: 100%;
+  border: 1px solid #84cc16;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .balance-div {
+    width: 30%;
+    margin-right: 0px;
+  }
+}
+.image {
+  width: 64px;
+  height: 64px;
+  margin: 24px;
+}
+
+.names {
+  color: #475569;
+  font-size: 12px;
+  font-family: 'Roboto';
+  line-height: 1.7;
+  margin: 0px;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .names {
+    font-size: 14px;
+  }
+}
+
+.amount {
+  color: #475569;
+  font-size: 18px;
+  font-family: 'Roboto';
+  line-height: 1.3;
+  margin: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .amount {
+    font-size: 24px;
+  }
+}
+.income-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #cffafe;
+  width: 100%;
+  border: 1px solid #06b6d4;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .income-div {
+    width: 30%;
+    margin-right: 0px;
+  }
+}
+
+.expenses-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ede9fe;
+  width: 100%;
+  min-width: 200px;
+  border: 1px solid #7c3aed;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .expenses-div {
+    width: 30%;
+    margin-right: 0px;
+  }
+}
+
+.bottom-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .bottom-div {
+    flex-direction: row;
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 424px;
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding-top: 24px;
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    width: 40%;
+    padding-right: 43px;
+    padding-left: 48px;
+  }
+}
+.transaction-header {
+  color: #475569;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 768px) {
+  .transaction-header {
+    font-size: 20px;
+  }
+}
+.input-label {
+  color: #7e858e;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 0px;
+}
+.inputs-form {
+  color: #1e293b;
+  background-color: #ffffff;
+  font-family: 'Roboto';
+  border: 1px solid #d7dfe9;
+  border-radius: 2px;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  min-width: 157px;
+}
+.add-btn {
+  background-color: #0b69ff;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 25px;
+  border-radius: 6px;
+  border: none;
+  padding-left: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 24px;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.history-div {
+  width: 100%;
+  min-height: 326px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding-left: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 24px;
+  margin-top: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .history-div {
+    width: 55%;
+    min-height: 424px;
+    padding-top: 24px;
+    padding-left: 28px;
+    padding-right: 41px;
+    padding-bottom: 40px;
+    margin-top: 0px;
+    margin-left: 32px;
+  }
+}
+.table-container {
+  height: 100%;
+  border-radius: 8px;
+}
+.table-list {
+  padding-left: 0;
+  margin: 0px;
+  list-style-type: none;
+}
+.table-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 48px;
+  list-style-type: none;
+  border: 1px solid #cbd5e1;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .table-header {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.header {
+  color: #334155;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 500;
+  width: 30%;
+  border-right: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    font-size: 16px;
   }
 }
